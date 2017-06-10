@@ -1,0 +1,30 @@
+{
+  "name": "angular-example",
+  "version": "1.0.0",
+  "description": "An example project with AngularJS 1.x, Webpack, NPM Scripts and Docker.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexlapinski/angular-example.git"
+  },
+  "keywords": [],
+  "author": "alex lapinski <contact@alexlapinski.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexlapinski/angular-example/issues"
+  },
+  "homepage": "https://github.com/alexlapinski/angular-example#readme",
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "scripts": {
+    "build": "webpack",
+    "clean": "rimraf dist/"
+  }
+}
