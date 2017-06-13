@@ -1,10 +1,13 @@
+const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './app/index.js',
+  entry: {
+    main: './app/index.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js', // Note: In Prod, use the [chunkHash] placeholder in the name
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -27,5 +30,14 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: (module) => {
+        return module.context && module.context.indexOf('node_modules') !== -1;
+      }
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+    }),
   ]
 };

@@ -1,7 +1,9 @@
-<html>
+<html ng-app>
   <head>
     <title>Angular 1.x Example Project</title>
     <link rel="Stylesheet" type="text/css" href="./dist/styles.css" />
+    <script src="./dist/manifest.js"></script>
+    <script src="./dist/vendor.js"></script>
   </head>
   <body>
     <section class="page">
@@ -9,7 +11,10 @@
         <h1>Angular 1.x Example Project</h1>
       </header>
       <section class="body">
-        <p>This is an example project for illustrating webpack for frontend development with angular 1.x.</p>
+        <div class="content">
+          <p>This is an example project for illustrating webpack for frontend development with angular 1.x.</p>
+          <p>Example {{ 'angular' + ' app!'}}</p>
+        </div>
         <div class="references">
           <h3>Links</h3>
           <ul>
@@ -25,6 +30,6 @@
         <p>Copyright &copy; 2017</p>
       </footer>
     </section>
-    <script src="./dist/bundle.js"></script>
+    <script src="./dist/main.js"></script>
   </body>
 </html>

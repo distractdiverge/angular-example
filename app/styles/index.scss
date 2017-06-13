@@ -16,11 +16,11 @@ body {
   @include grid-column(12);
   @include grid-container;
 
-  p {
+  .content {
     @include grid-column(8);
   }
 
-  div {
+  .references {
     @include grid-column(4);
   }
 }
