@@ -4,7 +4,8 @@
   "description": "An example project with AngularJS 1.x, Webpack, NPM Scripts and Docker.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/**/*.js"
+    "build": "webpack",
+    "clean": "rimraf dist/"
   },
   "repository": {
     "type": "git",
@@ -18,13 +19,13 @@
   },
   "homepage": "https://github.com/alexlapinski/angular-example#readme",
   "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "style-loader": "^0.18.2",
     "webpack": "^2.6.1"
   },
   "dependencies": {
+    "bourbon": "^4.3.4",
     "lodash": "^4.17.4"
-  },
-  "scripts": {
-    "build": "webpack",
-    "clean": "rimraf dist/"
   }
 }
