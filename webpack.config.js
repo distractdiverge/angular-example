@@ -9,11 +9,21 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.css$/,
+      test: /\.scss$/,
       use: ExtractTextPlugin.extract({
-        use: 'css-loader'
-      })
-    }]
+        use: [{
+          loader: 'css-loader'
+        }, {
+          loader: 'sass-loader',
+          options: {
+            includePaths: [
+              'node_modules/bourbon/app/assets/stylesheets',
+              'node_modules/bourbon-neat/core'
+            ],
+          }
+        }],
+      }),
+    }],
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
