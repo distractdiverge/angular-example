@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "bourbon": "^4.3.4",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.21"
   }
 }
